@@ -1,0 +1,288 @@
+When we develop a Web Application using Spring Boot, the knowledge of MVC pattern becomes important. 
+Needless to say, the MVC is a short form of Model, View and the Controller. Moreover, 
+the Spring Boot makes a developer’s life easier in developing the web application using MVC architecture. 
+Spring Boot offers us a starter project ‘Spring web’ to work with MVC applications. 
+In this article, we are going to learn entire CRUD operations that are mandatory to develop any MVC application.
+ It will also provide you the knowledge of complete flow of MVC starting from user interface till the data layer.
+ Hence our article title is Spring Boot MVC CRUD Example.
+ 
+All Technology & Software we used here.
+1. Eclipse IDE for Enterprise Java and Web Developers (includes Incubating components)
+Version: 2021-09 (4.21.0)
+2. dependency starter 
+Spring Web, Spring Data JPA, MySQL Driver, Thymeleaf, Lombok and Spring Boot DevTools and tomcat jasper 9
+3.MySQL Database : Version 8.0.30
+4. jdk 16
+What is MVC?
+Before starting the implementation of Spring Boot MVC CRUD example, it is important to know what the MVC is all about.
+Model =>>
+Model is the central component of the pattern. It is the application’s dynamic data structure, independent of the user interface. 
+Model directly manages the data, logic and business rules of the application.
+
+View==>>
+Any representation of information that an end user can see, such as forms, text boxes, drop-downs, charts, diagrams or tables. 
+Multiple views of the same information are also possible, such as a bar chart, pie chart and a tabular representation of a particular data. 
+Even excel and pdf reports are also considered as part of the View.
+
+Controller==>>
+The controller accepts requests from the user and converts it into commands for the model or view to get the response for the user. 
+Moreover, it acts as an interface between Model and View components to process all the incoming requests from the user.
+
+Interaction among the three Components:
+
+1) The model is responsible for managing the data of the application. It receives user input from the controller.
+
+2) The view renders presentation of the model in a particular format.
+
+3) The controller responds to the user input and performs interactions with the data model objects.
+ Moreover, it receives the input, optionally validates it and then passes the input to the model.
+
+
+
+
+Why to use the MVC Pattern?
+You are hereHome ==> java >
+Spring Boot MVC CRUD Example
+java MVCSpringSpring Boot
+Spring Boot MVC CRUD ExampleWhen we develop a Web Application using Spring Boot, the knowledge of MVC pattern becomes important. 
+Needless to say, the MVC is a short form of Model, View and the Controller. Moreover, 
+the Spring Boot makes a developer’s life easier in developing the web application using MVC architecture. 
+Spring Boot offers us a starter project ‘Spring web’ to work with MVC applications. 
+we are going to learn entire CRUD operations that are mandatory to develop any MVC application. 
+It will also provide you the knowledge of complete flow of MVC starting from user interface till the data layer. 
+Hence our article title is ‘Spring Boot MVC CRUD Example’.
+
+We will make use of Thymeleaf, Bootstrap for view part and MySQL for database. Let’s discuss our topic ‘Spring Boot MVC CRUD Example’ and the related concepts.
+
+Table of Contents
+What all Technology & Software we used?
+What is MVC?
+Why to use the MVC Pattern?
+What all functionalities can you expect from this Spring Boot MVC CRUD example?
+Home Page
+Invoice Registration Page
+List Of Invoices Page
+What are the steps to develop a Spring Boot MVC CRUD Example?
+Step#1: Create a starter Project using an IDE
+Step#2: Update application.properties or application.yml
+Step#3: Create Entity (model) class
+Step#4: Create Repository Interface for DB access
+Step#5: Create Service Interface & Service Impl classes
+Step#6: Create Controller class
+Step#7: Create pages for view
+Spring Boot MVC CRUD Example
+Use-case Details
+Step#1: Create a Spring Boot Starter Project using Eclipse
+Step#2: Update application.properties
+application.properties
+Step#3: Create Entity (model) class
+Invoice.java
+Step#4: Create Repository Interface for DB access
+ProductRepository.java
+Step#4A: Create a custom Exception class
+ProductNotFoundException.java
+Step#5: Create Service Interface & Service Impl classes
+ProductService.java
+ProductServiceImpl.java
+Step#6: Create Controller class
+ProductController.java
+Step#7: Create pages for view
+homePage.html
+registerInvoicePage.html
+allProductPage.html
+editProductPage.html
+How to test the application?
+
+Conclusion
+PlayUnmute
+Fullscreen
+
+What all Technology & Software we used?
+♦ Eclipse
+⇒ Dependent Starters : ‘Spring Web’, ‘Spring Data JPA’, ‘MySQL Driver’, ‘Thymeleaf’, ‘Lombok’ and ‘Spring Boot DevTools’
+♥ User Interface : Thymeleaf, Bootstrap
+♦ MySQL Database : Version ->8.0.30 MySQL Community Server
+♦ JDK16
+
+What is MVC?
+Before starting the implementation of Spring Boot MVC CRUD example, it is important to know what the MVC is all about.
+
+Model–View–Controller (usually known as MVC) is a software design pattern popularly used for developing web applications. 
+It divides the related programming logic into three interrelated components. The three components are Model, View, and the Controller.
+
+Model=>>
+Model is the central component of the pattern. It is the application’s dynamic data structure, 
+independent of the user interface. Model directly manages the data, logic and business rules of the application.
+
+View=>>
+Any representation of information that an end user can see, such as forms, text boxes, drop-downs, charts, diagrams or tables.
+Multiple views of the same information are also possible, such as a bar chart, pie chart and a tabular representation of a particular data. Even excel and pdf reports are also considered as part of the View.
+
+Controller=>>
+The controller accepts requests from the user and converts it into commands for the model or view to get the response for the user.
+Moreover, it acts as an interface between Model and View components to process all the incoming requests from the user.
+
+Interaction among the three Components:
+
+1) The model is responsible for managing the data of the application. It receives user input from the controller.
+
+2) The view renders presentation of the model in a particular format.
+
+3) The controller responds to the user input and performs interactions with the data model objects. Moreover, it receives the input, optionally validates it and then passes the input to the model.
+
+
+Why to use the MVC Pattern?
+Before going through the implementation of ‘Spring Boot MVC CRUD Example’, let’s understand why to use the MVC pattern. There are multiple reasons to use MVC pattern. Some of them are as below:
+
+1) Separation of Concerns -Separation of Concern is one of the core advantages of an MVC Pattern. The MVC pattern provides a clean separation between the UI, Business Logic, Model or Data. On the other hand, we can also say it provides a separation of Programming logics for various components.
+
+2) Easy to modify – Because of the separation of responsibilities, future development or modification becomes easier and in turn it increases the scalability of the software.
+
+3) Simultaneous development — Multiple developers can work simultaneously on the model, controller and views separately as per their area of expertise.
+
+4) Low coupling — The MVC pattern offers low coupling between its components.
+
+5) High cohesion — It provides high cohesion such as it enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together.
+
+
+Home Page
+1) When the user hits the application URL into the browser, he/she will see the home page that is the entry point of the application. 
+From Here, users will be able to visit the product registration page’ and the ‘list of All invoices’ Page by clicking on the given links.
+
+
+Invoice Registration Page
+2) If user clicks on the ‘Add product’ link available on the home page, he/she will redirect to the product registration page.
+
+3) In the product registration page, the user can fill the form and save it after clicking on the ‘Save product’ button. 
+After the successful addition of the record, a message “product with id: ‘XXX’ is added successfully !” will be displayed at the bottom. 
+From this page user can also visit to list of product Pages after clicking on the ‘List Of product’ link.
+
+4) If user clicks on the ‘Show All product’ link available on the home page, he/she will enter to the list of product Pages and can see all pre-existing invoices.
+
+
+
+List Of Invoices Page
+5) In the List Of Invoice page, user can perform ‘edit’ or ‘delete’ operation on the Product. 
+Additionally, user can also enter into the Invoice registration page after clicking on the ‘Add Product’ link.
+
+6) If user clicks on the ‘Edit’ link available at List Of Invoices page, a new form will open.
+ User can modify the value and update it into the DB after clicking on the ‘Update’ button. After a successful update, 
+a message “Invoice with id: ‘XXX’ is updated successfully !” will be displayed at the bottom.
+
+7) If user clicks on the ‘Delete’ link available at List Of Invoices page, the record will be deleted. 
+After successful removal of the record, a message “Invoice with id: ‘XXX’ is deleted successfully !” will be displayed at the bottom.
+
+8) From Step#1: Create a starter Project using an IDE
+Create a Spring Boot starter project using any IDE like STS, Netbeans, Intellij Idea etc. While creating Starter Project select ‘Spring Web’, ‘Spring Data JPA’, ‘MySQL Driver’, ‘ Thymeleaf’, ‘Lombok’ and ‘Spring Boot DevTools’ 
+as starter project dependencies. Here ‘Lombok’ and ‘Spring Boot Dev Tools’ are optional to add.
+
+the list of Invoices page, user can go back to the home page after clicking on the ‘Go to Home’ link.
+
+
+Step#2: Update application.properties or application.yml
+The next step to update either application.properties or application.yml whichever is applicable. 
+Here we need to provide data source details like DB driver class name, DB url, DB username and DB password.
+ Additionally, we can provide other configuration properties such as dialect, ddl-auto, show-sql etc. However, a
+s we are talking about a basic Spring Boot MVC CRUD example, our primary purpose to update this file is to just connect through the database.
+
+
+Step#3: Create Entity (model) class
+Now, it’s the first step to start coding. It’s a recommendation that we should start with Entity class.
+
+Step#4: Create Repository Interface for DB access
+In order to access the database programmatically,
+ we need to create one Repository Interface that will extend any Repository Interface provided by Spring Data JPA such as JpaRepository, CrudRepository, PagingAndSortingRepository etc. as per our requirement.
+ However, for a basic Spring Boot MVC CRUD example, we don’t need to write any custom method in this interface. 
+Spring Data JPA will provide all the methods by default that we require in a standard CRUD operation for our Spring Boot MVC CRUD Example
+
+Step#5: Create Service Interface & Service Impl classes
+Now we are in the Service Layer of our Spring Boot MVC CRUD Example. Here, we need to create one Service Interface and its Implementation class.
+ Annotate this class with @Service to inform Spring Container that this class will act as a service. In order to connect to Data Layer, 
+we need to provide dependency of the Repository interface (created in Step#4) in our service implementation class via auto-wiring.
+Step#6: Create Controller class
+Having followed the above steps, once we complete flow of data access, at the last, we need to create a Controller class to handle requests coming from the browser.
+ Annotate this class with @Controller to inform Spring Container that this is a controller. 
+The controller class will have handler methods to serve the requests for performing various operations involved in CRUD with the help of other layers.
+ Please note that the Controller class will connect to the service layer via auto-wiring of Service Interface.
+
+
+Step#7: Create pages for view
+In this step, we need to develop user interface part from where a user interacts with the application to perform various operations included in the CRUD.
+ Moreover, any request made by the user from UI page will be handed over to the Controller. Subsequently,
+ based on the request nature, the controller will connect to service layer to serve the request accordingly. However, we can develop 
+Step#6 and Step#7 interchangeably for our Spring Boot MVC CRUD Example, as both are dependent on each other.
+
+
+
+Use-case Details
+Let’s assume we have to develop an Invoice Processing Application. As the application name suggests, we must have an Invoice entity in this application. 
+In this example, we will develop CRUD operations for Invoice as an entity.
+
+Let’s develop Spring Boot MVC CRUD Example step by step as below:
+
+
+Step#1: Create a Spring Boot Starter Project using STS
+Here, we are using Eclipse as an IDE to develop the example. 
+While creating Starter Project select ‘Spring Web’, ‘Spring Data JPA’, ‘MySQL Driver’, ‘Thymeleaf’, ‘Lombok’ and ‘Spring Boot DevTools’ as starter project dependencies.
+Here ‘Lombok’ and ‘Spring Boot Dev Tools’ are optional to add. Even If you don’t know how to create Spring Boot Starter Project, Kindly visit Internal Link.  
+Also, if you want to know more about Lombok, then visit Internal Link on Lombok.
+
+Step#2: Update application.properties
+Let’s update application.properties that we already have after creating the starter project in step#1. For example, we need to include below entries.
+
+Step#3: Create Entity (model) class
+Since our use-case for this example is Product Processing, we will create an entity class as Product.java as below.
+
+
+Step#4: Create Repository Interface for DB access
+Next step is to create one Repository Interface. Please note that we should create a separate repository interface for each Entity in the application.
+ This is also applicable for classes taking part in other layers accordingly. Since we have only one Entity, 
+we will create one Repository Interface for now. As a naming convention, we will create a repository interface as ProductRepository.java as below.
+
+
+
+Step#4A: Create a custom Exception class
+This is an additional step to handle exceptions if any user search for an Invoice by Invoice Id and the same doesn’t exist at all. Let’s 
+suppose a user search from the browser using direct URL, then there is a possibility that the invoice may not exist. In order to handle this scenario, 
+we need to provide the user a readable message. It is possible with the help of creating a custom exception class. For example, 
+below code demonstrates the concept of creating a custom exception.
+
+
+Step#5: Create Service Interface & Service Impl classes
+As part of service layer, we need to create an interface and its implementation. 
+Don’t forget to include @Service at the top of the service implementation class. Additionally, 
+inject the dependency of the Repository interface via @Autowired. For example,
+ below code demonstrates the concept behind the service layer. As a convention, the service interface should start with the letter ‘I’ t
+o be recognized as an interface. Subsequently, the service implementation class should have a suffix ‘Impl’ in its name as shown below.
+
+
+Step#6: Create Controller class
+In order to handle various requests of a client, we need to create a controller as ProductController.java. 
+Moreover, each handler method will return a UI page based on the criteria it implemented for. For example,
+ below code snippet of InvoiceController will demonstrate the relation between UI page and the controller.
+
+
+Step#7: Create pages for view
+Last part of our Spring Boot MVC CRUD Example is to create UI pages that will help users to interact with the application. 
+Here, we have four pages : homePage.html as an entry point of the application, registerProductPage.
+html to fill the form and register an Product, allProductPages.html to see the list of registered Product, and editProductPage.
+html to update the data of any Product.
+
+
+
+How to test the application?
+In order to test the application, we need to open a browser and hit the URL http://localhost:8888/invoice/. On hitting the URL, the home page will get displayed. Further, follow the instruction given in the ‘What all functionalities can you expect from this Spring Boot MVC CRUD example?’ section of this article to test all other functionalities accordingly.
+
+
+
+
+Conclusion
+In this article we have covered all the theoretical and example part of ‘Spring Boot MVC CRUD example’,
+ finally, you should be able to build an MVC application using Spring Boot. Similarly, 
+we expect from you to further extend this example, as per your requirement. 
+Also try to implement it in your project accordingly. Moreover, Feel free to provide your comments in the comments section below.
+
+
+
+
+
